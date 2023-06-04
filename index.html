@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang= "en">
+    <head>
+        <meta charset= "UTF - 8">
+        <meta http-equiv= "X-UA-Compatible" content = "IE = edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+>    </head>
+    <body>
+        <div id = "header">
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <p>Student at National Institute Of Technology</p>
+                    <h1> Hi, <br>I'm <span>Ruthwika sagar reddy</span><br> from Hyderabad, India</h1>
+                </div>        
+            </div>
+        </div>
+        <!---------------about------------->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/image1.jpeg" alt="">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>I'm an enthusiastic student always ready to learn new things. I'm currently an undergraduate at National Institute of Technology, Warangal in the branch of Civil Engineering. I always wish to live in a environment which challenges me everyday and the end of day I decipher them using my wits and strategies. My ethic is to never stop learning and utilize every opportunity that improves me.</p>
+
+                        <div class="tab-titles">
+                             <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                             <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Programming</span><br>C++, Python, SQL</li>
+                                <li><span>Web Development</span><br>HTML & CSS, JavaScript</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>Bachelor of Technology</span><br>Civil Engineering<br>National Institute of Technology, Warangal</li>
+                                <li><span>Class 12</span><br>Nano Jr. College</li>
+                                <li><span>Class 10</span><br>Narayana High School</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-----portfolio------->
+        <div class="portfolio">
+            <div class="container">
+                <h1 class="sub-title">My work</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <ul>
+                            <li><span>Website UI design</span><br>My project involves designing the user interface (UI) for a website with the help of Figma. The UI design aligns with the website's purpose, brand identity, and target audience, ensuring
+                                seamless navigation and effective communication of
+                                information.</li>
+                            <li><span>Food app UI design</span><br>My project involves designing the user interface (UI) for a website with the help of Figma. The UI design aligns with the website's purpose, brand identity, and target audience, ensuring
+                                seamless navigation and effective communication of
+                                information.
+                                </li>
+                            <li><span>Issue tracking system to raise and track hostel related issues</span><br>We tried to create a portal where students and staff can
+                                login separately. Students can register their complaints
+                                of respective sections. And their complaints are
+                                automatically assigned to the respective staff and then
+                                staff can work accordingly.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+    </body>
+</html>
